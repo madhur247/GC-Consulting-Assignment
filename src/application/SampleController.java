@@ -167,8 +167,8 @@ public class SampleController implements Initializable{
 			}
 		}
 	};
-	password.setOnKeyPressed(passeve);
-	passtext.setOnKeyPressed(passeve);
+	password.setOnKeyTyped(passeve);
+	passtext.setOnKeyTyped(passeve);
 	EventHandler<KeyEvent> nameeve = new EventHandler<KeyEvent>() {
 		public void handle(KeyEvent keyeve2) {
 			if(keyeve2.getCode()!=KeyCode.CAPS && keyeve2.getCode()!=KeyCode.SHIFT) {
@@ -178,7 +178,7 @@ public class SampleController implements Initializable{
 			}
 		}
 	};
-	username.setOnKeyPressed(nameeve);
+	username.setOnKeyTyped(nameeve);
 	EventHandler<MouseEvent> eyecon = new EventHandler<MouseEvent>() {
 		public void handle(MouseEvent me2) {
 			if(showhide.getGlyphName().equals("EYE")) {
