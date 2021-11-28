@@ -17,6 +17,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import javafx.scene.control.Alert.AlertType;
 
 public class SampleController implements Initializable{
@@ -145,6 +146,12 @@ public class SampleController implements Initializable{
 					streval.add("Weak");
 					streval.add("Medium");
 					streval.add("Strong");
+					ArrayList<String> strecol = new ArrayList<String>();
+					strecol.add("RED");
+					strecol.add("DARKORANGE");
+					strecol.add("ORANGE");
+					strecol.add("YELLOW");
+					strecol.add("LIGHTGREEN");
 					stre1 = strengthCheck(password.getText());
 					strength.setText("Strength:");
 					int counter = 0;
@@ -155,6 +162,7 @@ public class SampleController implements Initializable{
 						}
 					}
 					strengthval.setText(streval.get(counter-1));
+					strengthval.setTextFill(Color.web(strecol.get(counter-1)));
 				}
 			}
 		}
