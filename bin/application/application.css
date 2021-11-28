@@ -1,0 +1,13 @@
+#showhide:hover {
+	-fx-cursor: hand;
+}
+#submitbtn {
+	-fx-background-color: #84C9FB;
+}
+#submitbtn:hover {
+	-fx-cursor: hand;
+	-fx-background-color: rgb(71, 157, 214);
+}
+#submitbtn:pressed {
+	-fx-text-fill: white;
+}
