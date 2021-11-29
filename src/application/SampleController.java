@@ -79,7 +79,7 @@ public class SampleController implements Initializable{
 				namealert.setText("");
 				passalert.setText("");
 				String passstrength = strengthval.getText();
-				if(username.getText()=="")
+				if(username.getText().equals(""))
 				{
 					namealert.setText("*Please Enter The Username");
 					username.requestFocus();
@@ -88,12 +88,12 @@ public class SampleController implements Initializable{
 						passalert.setText("*Please Enter The Password");
 					}
 				}
-				else if(password.getText()=="")
+				else if(password.getText().equals(""))
 				{
 					passalert.setText("*Please Enter The Password");
 					password.requestFocus();
 				}
-				else if(passstrength==""||passstrength=="Bad"||passstrength=="Weak"||passstrength=="Medium"||passstrength=="Very Bad")
+				else if(passstrength.equals("")||passstrength.equals("Bad")||passstrength.equals("Weak")||passstrength.equals("Medium")||passstrength.equals("Very Bad"))
 				{
 					ArrayList<Boolean> stre = new ArrayList<Boolean>();
 					stre = strengthCheck(password.getText());
@@ -131,10 +131,10 @@ public class SampleController implements Initializable{
 	EventHandler<KeyEvent> passeve = new EventHandler<KeyEvent>() {
 		public void handle(KeyEvent keyeve) {
 			if(keyeve.getCode()!=KeyCode.CAPS && keyeve.getCode()!=KeyCode.SHIFT) {
-				if(password.getText()!="") {
+				if(!password.getText().equals("")) {
 					passalert.setText("");
 				}
-				if(password.getText()=="") {
+				if(password.getText().equals("")) {
 					strength.setText("");
 					strengthval.setText("");
 				}
