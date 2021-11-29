@@ -183,12 +183,10 @@ public class SampleController implements Initializable{
 		public void handle(MouseEvent me2) {
 			if(showhide.getGlyphName().equals("EYE")) {
 				showhide.setGlyphName("EYE_SLASH");
-				showhide.setId("eyehide");
 				passtext.toFront();
 			}
 			else {
 				showhide.setGlyphName("EYE");
-				showhide.setId("eyeshow");
 				password.toFront();
 			}
 		}
